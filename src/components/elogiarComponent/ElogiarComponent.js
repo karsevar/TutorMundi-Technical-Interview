@@ -9,23 +9,27 @@ function ElogiarComponent(props) {
     setElogiarToggle(true);
     event.stopPropagation();
   };
-  if (elogiarToggle) {
-    return (
-      <>
-        <h2>Component is toggled</h2>
-      </>
-    );
-  } else {
-    return (
-      <div className='elogiar-component'>
+
+  return (
+    <div className='elogiar-component'>
+      {elogiarToggle ? (
+        <>
+          <h2>Component is toggled</h2>
+        </>
+      ) : (
         <div className='elogiar-container'>
           <button className='elogiar-btn' onClick={event => handleClick(event)}>
             ELOGIAR
           </button>
         </div>
+      )}
+
+      <div className='confirmar-pular-container'>
+        <button className='pular-btn'>PULAR</button>
+        <button className='confirmar-btn'>CONFIRMAR</button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ElogiarComponent;

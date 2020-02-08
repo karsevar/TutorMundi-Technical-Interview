@@ -1,8 +1,13 @@
 .elogiar-component {
   margin-top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   .elogiar-container {
     width: 40%;
 
@@ -15,6 +20,47 @@
       color: blue;
       border-width: 2px;
       font-weight: 600;
+    }
+
+    .elogiar-btn:hover {
+      border-color: white;
+      color: white;
+      background-color: blue;
+    }
+  }
+
+  .confirmar-pular-container {
+    width: 80%;
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: center;
+
+    .pular-btn {
+      margin-right: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      background: none;
+      border: none;
+    }
+
+    .confirmar-btn {
+      font-size: 1rem;
+      font-weight: 700;
+      background: blue;
+      color: white;
+      width: 9.2rem;
+      height: 2.6rem;
+      border-radius: 2rem;
+      border: none;
+      box-shadow: 0px 12px 25px #888888;
+    }
+
+    .confirmar-btn:hover {
+      background-color: white;
+      color: blue;
     }
   }
 }
