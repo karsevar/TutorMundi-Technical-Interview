@@ -1,0 +1,20 @@
+.elogiar-component {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  .elogiar-container {
+    width: 40%;
+
+    .elogiar-btn {
+      width: 6rem;
+      height: 2rem;
+
+      border-radius: 2rem;
+      border-color: blue;
+      color: blue;
+      border-width: 2px;
+      font-weight: 600;
+    }
+  }
+}
