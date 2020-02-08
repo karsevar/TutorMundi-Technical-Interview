@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./reviewComponent.scss";
 import { ReactComponent as Lamp } from "./lamp.svg";
 import { ReactComponent as CheckSheet } from "./checked-sheet.svg";
 import { ReactComponent as LookingGlass } from "./looking-glass.svg";
