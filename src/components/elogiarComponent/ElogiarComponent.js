@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReviewComponent from "../reviewComponent/ReviewComponent";
 import "./elogiarComponent.scss";
 
 function ElogiarComponent(props) {
@@ -13,9 +14,7 @@ function ElogiarComponent(props) {
   return (
     <div className='elogiar-component'>
       {elogiarToggle ? (
-        <>
-          <h2>Component is toggled</h2>
-        </>
+        <ReviewComponent />
       ) : (
         <div className='elogiar-container'>
           <button className='elogiar-btn' onClick={event => handleClick(event)}>
