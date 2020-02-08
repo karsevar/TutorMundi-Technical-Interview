@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import HeaderTutor from "./components/HeaderTutor";
+import HeaderTutor from "./components/headerTutor/HeaderTutor";
 
 function App() {
   return (
