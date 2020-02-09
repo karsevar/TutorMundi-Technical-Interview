@@ -34,7 +34,9 @@ function ReviewComponent(props) {
             <p>Estimula a criatividade</p>
           </div>
           <div
-            className='select-box'
+            className={`select-box ${
+              props.review["compliment2"] ? "selected" : ""
+            }`}
             onClick={event =>
               changeHandler(event, "compliment2", !props.review["compliment2"])
             }
@@ -43,7 +45,9 @@ function ReviewComponent(props) {
             <p>Estimula a curiosidade</p>
           </div>
           <div
-            className='select-box'
+            className={`select-box ${
+              props.review["compliment3"] ? "selected" : ""
+            }`}
             onClick={event =>
               changeHandler(event, "compliment3", !props.review["compliment3"])
             }
@@ -52,7 +56,9 @@ function ReviewComponent(props) {
             <p>Se adapta a necessidade</p>
           </div>
           <div
-            className='select-box'
+            className={`select-box ${
+              props.review["compliment4"] ? "selected" : ""
+            }`}
             onClick={event =>
               changeHandler(event, "compliment4", !props.review["compliment4"])
             }
@@ -61,7 +67,9 @@ function ReviewComponent(props) {
             <p>Otima didatica</p>
           </div>
           <div
-            className='select-box'
+            className={`select-box ${
+              props.review["compliment5"] ? "selected" : ""
+            }`}
             onClick={event =>
               changeHandler(event, "compliment5", !props.review["compliment5"])
             }
@@ -73,7 +81,14 @@ function ReviewComponent(props) {
       </div>
       <div className='text-container'>
         <h4>Deixe um recado</h4>
-        <textarea className='elogiar-comment-box' name='textarea' />
+        <textarea
+          className='elogiar-comment-box'
+          name='textarea'
+          value={props.review["comment"]}
+          onChange={event =>
+            changeHandler(event, "comment", event.target.value)
+          }
+        />
       </div>
     </div>
   );
