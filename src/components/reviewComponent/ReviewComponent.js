@@ -82,6 +82,7 @@ function ReviewComponent(props) {
           className='elogiar-comment-box'
           name='textarea'
           value={props.review["comment"]}
+          placeholder='Faça elogios, agradecimentos e sugestões. Os tutores adoram!'
           onChange={event =>
             changeHandler(event, "comment", event.target.value)
           }
