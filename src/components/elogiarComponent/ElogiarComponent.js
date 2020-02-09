@@ -4,7 +4,15 @@ import "./elogiarComponent.scss";
 
 function ElogiarComponent(props) {
   const [elogiarToggle, setElogiarToggle] = useState(false);
-
+  const [review, setReview] = useState({
+    stars: 5,
+    comment: "",
+    compliment1: false,
+    compliment2: false,
+    compliment3: false,
+    compliment4: false,
+    compliment5: false
+  });
   const handleClick = event => {
     console.log("elogiar btn is clicked");
     setElogiarToggle(true);
@@ -12,9 +20,9 @@ function ElogiarComponent(props) {
   };
 
   return (
-    <div className='elogiar-component'>
+    <form className='elogiar-component'>
       {elogiarToggle ? (
-        <ReviewComponent />
+        <ReviewComponent review={review} setReview={setReview} />
       ) : (
         <div className='elogiar-container'>
           <button className='elogiar-btn' onClick={event => handleClick(event)}>
@@ -27,7 +35,7 @@ function ElogiarComponent(props) {
         <button className='pular-btn'>PULAR</button>
         <button className='confirmar-btn'>CONFIRMAR</button>
       </div>
-    </div>
+    </form>
   );
 }
 

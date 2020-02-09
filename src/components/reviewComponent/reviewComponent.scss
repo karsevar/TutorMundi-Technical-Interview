@@ -29,14 +29,39 @@
         svg {
           margin-bottom: 10px;
           padding-top: 1rem;
+          fill: #2cc6d0;
+        }
+      }
+
+      .selected {
+        border: 2px solid white;
+        color: white;
+
+        background-color: #2cc6d0;
+        fill: white;
+
+        svg path {
+          fill: white !important;
         }
       }
     }
   }
 
-  .textbox-container {
+  .text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    .elogiar-comment-box {
+      outline: none;
+      width: 87%;
+      height: 9rem;
+      border: 2px solid #cccccc;
+      border-radius: 5px;
+      padding: 1.2rem 2rem;
+      resize: none;
+      font-size: 1rem;
+      color: #cccccc;
+    }
   }
 }
