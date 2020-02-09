@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import ReviewComponent from "../reviewComponent/ReviewComponent";
 import "./elogiarComponent.scss";
 
@@ -16,6 +17,7 @@ function ElogiarComponent(props) {
   const handleClick = event => {
     setElogiarToggle(true);
     event.stopPropagation();
+    scroll.scrollToBottom(1000);
   };
 
   const handleSubmit = event => {
