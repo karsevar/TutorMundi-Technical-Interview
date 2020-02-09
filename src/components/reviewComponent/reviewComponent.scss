@@ -15,13 +15,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 6.2rem;
-        height: 7.8rem;
+        width: 4.5rem;
+        height: 7rem;
+        padding: 0.2rem 1rem;
         margin-right: 1rem;
         border-radius: 5px;
         border: 2px solid #2cc6d0;
 
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: #2cc6d0;
 
         p {
@@ -56,15 +57,9 @@
         width: 400px;
         overflow-x: auto;
 
-        .select-box {
-          width: 6.2rem;
-          height: 7.8rem;
-          padding: 0.5rem 1rem;
-        }
-
         .check-sheet-box {
-          padding-right: 2rem;
-          padding-left: 2rem;
+          padding-right: 1.65rem;
+          padding-left: 1.65rem;
         }
       }
     }
@@ -84,7 +79,7 @@
       padding: 1.2rem 1.2rem;
       resize: none;
       font-size: 1rem;
-      //opacity: 0.1;
+      opacity: 0.1;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
