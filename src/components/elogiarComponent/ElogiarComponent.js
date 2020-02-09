@@ -14,7 +14,6 @@ function ElogiarComponent(props) {
     compliment5: false
   });
   const handleClick = event => {
-    console.log("elogiar btn is clicked");
     setElogiarToggle(true);
     event.stopPropagation();
   };

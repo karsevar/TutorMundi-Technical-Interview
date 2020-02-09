@@ -53,7 +53,7 @@ function ReviewComponent(props) {
             <p>Se adapta a necessidade</p>
           </div>
           <div
-            className={`select-box ${
+            className={`select-box check-sheet-box ${
               props.review["compliment4"] ? "selected" : ""
             }`}
             onClick={event =>
