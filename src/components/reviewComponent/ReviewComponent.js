@@ -7,11 +7,8 @@ import { ReactComponent as SmileFace } from "./smile-face.svg";
 import { ReactComponent as SwissKnife } from "./swiss-knife.svg";
 
 function ReviewComponent(props) {
-  console.log(props.review);
-
   const changeHandler = (event, target, value) => {
     event.stopPropagation();
-    console.log("event", event, "target", target, "value", value);
     props.setReview({ ...props.review, [target]: value });
   };
 

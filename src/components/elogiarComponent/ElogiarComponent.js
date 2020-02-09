@@ -19,8 +19,39 @@ function ElogiarComponent(props) {
     event.stopPropagation();
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log("form output", review);
+    setReview({
+      stars: 5,
+      comment: "",
+      compliment1: false,
+      compliment2: false,
+      compliment3: false,
+      compliment4: false,
+      compliment5: false
+    });
+    setElogiarToggle(false);
+  };
+
+  const handleJump = event => {
+    event.preventDefault();
+    console.log("deleting following form output", review);
+    setReview({
+      stars: 5,
+      comment: "",
+      compliment1: false,
+      compliment2: false,
+      compliment3: false,
+      compliment4: false,
+      compliment5: false
+    });
+    setElogiarToggle(false);
+    event.stopPropagation();
+  };
+
   return (
-    <form className='elogiar-component'>
+    <form className='elogiar-component' onSubmit={event => handleSubmit(event)}>
       {elogiarToggle ? (
         <ReviewComponent review={review} setReview={setReview} />
       ) : (
@@ -32,8 +63,12 @@ function ElogiarComponent(props) {
       )}
 
       <div className='confirmar-pular-container'>
-        <button className='pular-btn'>PULAR</button>
-        <button className='confirmar-btn'>CONFIRMAR</button>
+        <button className='pular-btn' onClick={event => handleJump(event)}>
+          PULAR
+        </button>
+        <button className='confirmar-btn' type='submit'>
+          CONFIRMAR
+        </button>
       </div>
     </form>
   );
